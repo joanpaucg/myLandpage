@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Fullstack | Matrix Elegante</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background: radial-gradient(circle at top, #0a0a0a 0%, #000 100%);
+      color: #b3ffcc;
+      overflow-x: hidden;
+    }
+
+    /* Fondo Matrix sutil */
+    canvas#matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      filter: blur(1px);
+    }
+
+    /* Animaciones suaves */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    a {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fondo Matrix -->
+  <canvas id="matrix"></canvas>
+
+  <!-- NAV -->
+  <nav class="w-full p-4 bg-black bg-opacity-60 fixed top-0 left-0 z-10 border-b border-emerald-500/40 backdrop-blur-sm">
+    <ul class="flex justify-center space-x-8 text-emerald-300">
+      <li><a href="#inicio" class="hover:text-emerald-100">Inicio</a></li>
+      <li><a href="#sobre-mi" class="hover:text-emerald-100">Sobre mí</a></li>
+      <li><a href="#proyectos" class="hover:text-emerald-100">Proyectos</a></li>
+      <li><a href="#contacto" class="hover:text-emerald-100">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="h-screen flex flex-col justify-center items-center text-center fade-in px-4">
+    <h1 class="text-5xl font-bold text-emerald-400 mb-4">Hola, soy <span class="text-emerald-300">Joan Pau</span></h1>
+    <p class="text-lg text-emerald-200 mb-8 max-w-2xl">Desarrollador Fullstack especializado en crear soluciones digitales eficientes, limpias y con estilo.</p>
+    <a href="#proyectos" class="border border-emerald-400 px-6 py-2 rounded hover:bg-emerald-400 hover:text-black transition">
+      Ver Proyectos
+    </a>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="py-24 px-6 fade-in">
+    <h2 class="text-3xl text-center font-bold mb-6 text-emerald-400">Sobre mí</h2>
+    <div class="max-w-3xl mx-auto text-center text-emerald-200 leading-relaxed">
+      <p>
+        Soy un desarrollador <span class="text-emerald-300">fullstack</span> con pasión por el detalle, el rendimiento y la experiencia de usuario.  
+        Trabajo con tecnologías modernas como <span class="text-emerald-300">Angular, Spring boot, TypeScript y TailwindCSS</span>.
+      </p>
+      <p class="mt-4">
+        Mi filosofía: escribir código elegante y funcional, con foco en la escalabilidad y el diseño limpio.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-24 px-6 bg-black/70 fade-in">
+    <h2 class="text-3xl text-center font-bold mb-10 text-emerald-400">Proyectos Destacados</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="border border-emerald-500/40 p-6 rounded-xl hover:shadow-lg hover:shadow-emerald-400/10 transition">
+        <h3 class="text-xl font-semibold mb-2 text-emerald-300">Proyecto 1</h3>
+        <p class="text-emerald-200 mb-4">Plataforma de gestión de tareas desarrollada con React y Node.js.</p>
+        <a href="#" class="text-emerald-400 hover:text-emerald-100">Ver más →</a>
+      </div>
+
+      <div class="border border-emerald-500/40 p-6 rounded-xl hover:shadow-lg hover:shadow-emerald-400/10 transition">
+        <h3 class="text-xl font-semibold mb-2 text-emerald-300">Proyecto 2</h3>
+        <p class="text-emerald-200 mb-4">Dashboard con visualización de datos en tiempo real y backend seguro.</p>
+        <a href="#" class="text-emerald-400 hover:text-emerald-100">Ver más →</a>
+      </div>
+
+      <div class="border border-emerald-500/40 p-6 rounded-xl hover:shadow-lg hover:shadow-emerald-400/10 transition">
+        <h3 class="text-xl font-semibold mb-2 text-emerald-300">Proyecto 3</h3>
+        <p class="text-emerald-200 mb-4">Landing page moderna, rápida y responsiva con TailwindCSS.</p>
+        <a href="#" class="text-emerald-400 hover:text-emerald-100">Ver más →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-24 px-6 fade-in">
+    <h2 class="text-3xl text-center font-bold mb-6 text-emerald-400">Contacto</h2>
+    <div class="text-center text-emerald-200">
+      <p class="mb-4">¿Te gustaría colaborar o contratar mis servicios?</p>
+      <p class="mb-2">📧 <a href="mailto:tucorreo@example.com" class="text-emerald-300 hover:text-emerald-100">tucorreo@example.com</a></p>
+      <p>🌐 <a href="https://github.com/tuusuario" target="_blank" class="text-emerald-300 hover:text-emerald-100">github.com/tuusuario</a></p>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 border-t border-emerald-600/40 text-emerald-400 text-sm">
+    © 2025 Joan Pau — Desarrollador Fullstack
+  </footer>
+
+  <!-- Script Matrix Rain (versión sutil) -->
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = Array(256).join(1).split('');
+    const draw = () => {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.07)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#00ff99';
+      ctx.font = '12pt monospace';
+      letters.map((y_pos, index) => {
+        const text = String.fromCharCode(12448 + Math.random() * 96);
+        const x_pos = index * 10;
+        ctx.fillText(text, x_pos, y_pos);
+        letters[index] = y_pos > canvas.height + Math.random() * 1e4 ? 0 : y_pos + 8;
+      });
+    };
+    setInterval(draw, 60);
+
+    window.addEventListener('resize', () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    });
+  </script>
+</body>
+</html>
